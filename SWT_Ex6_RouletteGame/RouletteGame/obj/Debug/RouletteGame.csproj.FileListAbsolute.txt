@@ -1,0 +1,5 @@
+C:\# OFFLINE WORK\Courses\I4SWT1\EXERCISES\Stubs\RouletteGame\RouletteGame\bin\Debug\RouletteGame.dll
+C:\# OFFLINE WORK\Courses\I4SWT1\EXERCISES\Stubs\RouletteGame\RouletteGame\bin\Debug\RouletteGame.pdb
+C:\# OFFLINE WORK\Courses\I4SWT1\EXERCISES\Stubs\RouletteGame\RouletteGame\obj\Debug\ResolveAssemblyReference.cache
+C:\# OFFLINE WORK\Courses\I4SWT1\EXERCISES\Stubs\RouletteGame\RouletteGame\obj\Debug\RouletteGame.dll
+C:\# OFFLINE WORK\Courses\I4SWT1\EXERCISES\Stubs\RouletteGame\RouletteGame\obj\Debug\RouletteGame.pdb
