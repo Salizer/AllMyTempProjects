@@ -41,12 +41,14 @@ namespace RouletteGame.Tests
         [Test]
         void WonAmount_GotWinningNumber_GetsRightAmountOfMoney()
         {
-            Assert.AreEqual(uiAmount * 36, fbTestObj.WonAmount(new Field(uiFieldNumber, 0)); 
+            fsFieldStub.Number = uiFieldNumber;
+            Assert.AreEqual(uiAmount * 36, fbTestObj.WonAmount(fsFieldStub)); 
         }
         [Test]
         void WonAmount_DidntWin_GetZeroMoney()
         {
-            Assert.AreEqual(0, fbTestObj.WonAmount(0)); 
+            fsFieldStub.Number = 2;
+            Assert.AreEqual(0, fbTestObj.WonAmount(fsFieldStub)); 
         }
     }
 }

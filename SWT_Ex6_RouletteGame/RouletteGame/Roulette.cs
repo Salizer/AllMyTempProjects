@@ -11,25 +11,6 @@ namespace RouletteGame
         Field GetResult();
     }
 
-    public class RouletteStub : IRoulette
-    {
-        RouletteStub()
-        {
-
-        }
-
-        void Spin()
-        {
-
-        }
-
-        Field GetResult()
-        {
-            return 
-        }
-
-    }
-
     public class Roulette : IRoulette
     {
 
