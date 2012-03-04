@@ -34,7 +34,7 @@ namespace RouletteGame
     {
         public const uint Red = 0;
         public const uint Black = 1;
-        public const uint Green = 1;
+        public const uint Green = 2;
 
         private uint _number = 0;
         public uint Number
