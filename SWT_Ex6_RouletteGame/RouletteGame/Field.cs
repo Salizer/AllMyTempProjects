@@ -5,7 +5,40 @@ using System.Text;
 
 namespace RouletteGame
 {
-    public class Field
+    public interface IField
+    {
+		// Hmm man kan bruge const i interface o.O, troede ikke man måtte have variabler.. eller min intellisense er fucked.
+        const uint Red = 0;
+        const uint Black = 1;
+        const uint Green = 1;
+
+        uint Number
+        {
+            get;
+            private set; // Mærkeligt får ikke fejl, troede ikke man kunne specificere i interface. (private)
+        }
+
+        uint Color
+        {
+            get;
+            private set;
+        }
+
+        bool Even
+        {
+            get
+        }
+        
+      
+    }
+	
+	public class FieldStub : IField
+	{
+	
+	}
+
+
+    public class Field : IField
     {
         public const uint Red = 0;
         public const uint Black = 1;

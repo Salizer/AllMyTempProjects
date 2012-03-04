@@ -5,8 +5,34 @@ using System.Text;
 
 namespace RouletteGame
 {
-    public class Roulette
+    public interface IRoulette
     {
+        void Spin();
+        Field GetResult();
+    }
+
+    public class RouletteStub : IRoulette
+    {
+        RouletteStub()
+        {
+
+        }
+
+        void Spin()
+        {
+
+        }
+
+        Field GetResult()
+        {
+            return 
+        }
+
+    }
+
+    public class Roulette : IRoulette
+    {
+
         private List<Field> _fields;
         private Field _result;
 
