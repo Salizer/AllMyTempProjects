@@ -9,7 +9,7 @@ namespace RouletteGame
     {
         string PlayerName { get; }
         uint Amount { get; }
-        uint WonAmount(Field field);
+        uint WonAmount(IField field);
     }
 
     public abstract class Bet : IBet
@@ -27,7 +27,7 @@ namespace RouletteGame
         public string PlayerName    { get { return _playerName; }   }
         public uint Amount          { get { return _amount;     }   }
 
-        public virtual uint WonAmount(Field field)  { return 0; }
+        public virtual uint WonAmount(IField field)  { return 0; }
     }
 
     public class FieldBet : Bet
@@ -39,7 +39,7 @@ namespace RouletteGame
             _fieldNumber = fieldNumber;
         }
 
-        public override uint WonAmount(Field field)
+        public override uint WonAmount(IField field)
         {
             if (field.Number == _fieldNumber) return 36 * Amount;
             else return 0;
@@ -60,7 +60,7 @@ namespace RouletteGame
             _color = color;
         }
 
-        override public uint WonAmount(Field field)
+        override public uint WonAmount(IField field)
         {
             if (field.Color == _color) return 2 * Amount;
             else return 0;
@@ -91,7 +91,7 @@ namespace RouletteGame
             _even = even;
         }
 
-        override public uint WonAmount(Field field)
+        override public uint WonAmount(IField field)
         {
             if (field.Even == _even) return 2 * Amount;
             else return 0;

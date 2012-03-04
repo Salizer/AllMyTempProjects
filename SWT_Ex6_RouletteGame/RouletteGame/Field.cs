@@ -7,36 +7,28 @@ namespace RouletteGame
 {
     public interface IField
     {
-		// Hmm man kan bruge const i interface o.O, troede ikke man måtte have variabler.. eller min intellisense er fucked.
-        const uint Red = 0;
-        const uint Black = 1;
-        const uint Green = 1;
-
         uint Number
         {
             get;
-            private set; // Mærkeligt får ikke fejl, troede ikke man kunne specificere i interface. (private)
         }
 
         uint Color
         {
             get;
-            private set;
         }
 
         bool Even
         {
-            get
+            get;
         }
         
-      
     }
-	
+/*	Ikke brugt
 	public class FieldStub : IField
 	{
 	
 	}
-
+*/
 
     public class Field : IField
     {

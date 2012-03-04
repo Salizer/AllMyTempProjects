@@ -14,25 +14,39 @@ namespace RouletteGame.Tests
         private string sUserName = "user1";
         private uint uiAmount = 1000;
         private uint uiFieldNumber = 1;
+        private FieldStub fsFieldStub;
 
         // Setup and teardown
         [SetUp]
         void setup()
         {
-            fbTestObj = new FieldBet(sUserName, uiAmount, uiFieldNumber); 
+            fbTestObj = new FieldBet(sUserName, uiAmount, uiFieldNumber);
+            fsFieldStub = new FieldStub();
         }
 
         [TearDown]
         void teardown()
         {
-            fbTestObj = null; 
+            fbTestObj = null;
+            fsFieldStub = null;
         }
 
         // Tests
         [Test]
         void WonAmount_GotWinningNumber_GetMoney()
         {
-            
+            fsFieldStub.Number = uiFieldNumber;
+            Assert.Greater(fbTestObj.WonAmount(fsFieldStub), 0); 
+        }
+        [Test]
+        void WonAmount_GotWinningNumber_GetsRightAmountOfMoney()
+        {
+            Assert.AreEqual(uiAmount * 36, fbTestObj.WonAmount(new Field(uiFieldNumber, 0)); 
+        }
+        [Test]
+        void WonAmount_DidntWin_GetZeroMoney()
+        {
+            Assert.AreEqual(0, fbTestObj.WonAmount(0)); 
         }
     }
 }
