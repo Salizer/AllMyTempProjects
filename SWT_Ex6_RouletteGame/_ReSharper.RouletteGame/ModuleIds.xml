@@ -1,4 +1,5 @@
 <Modules>
   <Module PersistentId="C9AE66FF-40A0-48E4-8BB0-AFD873532395" ModuleId="RouletteGameTestApplication" />
   <Module PersistentId="1410CCC5-D275-4153-BE1C-9A29605FFA59" ModuleId="RouletteGame" />
+  <Module PersistentId="E2F7983C-CBC3-409B-A965-C6D8E0C989A0" ModuleId="RouletteGame.Tests" />
 </Modules>

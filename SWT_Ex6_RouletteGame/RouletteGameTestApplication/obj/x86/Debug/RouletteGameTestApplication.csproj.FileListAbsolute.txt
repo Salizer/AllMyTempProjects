@@ -7,3 +7,5 @@ C:\# OFFLINE WORK\Courses\I4SWT1\EXERCISES\Stubs\RouletteGame\RouletteGameTestAp
 C:\# OFFLINE WORK\Courses\I4SWT1\EXERCISES\Stubs\RouletteGame\RouletteGameTestApplication\obj\x86\Debug\RouletteGameTestApplication.pdb
 C:\Users\Salizer\Documents\IHA\4 Semester\I4SWT\Exercises\Exercise6\SWT_Ex6_RouletteGame\RouletteGameTestApplication\obj\x86\Debug\RouletteGameTestApplication.exe
 C:\Users\Salizer\Documents\IHA\4 Semester\I4SWT\Exercises\Exercise6\SWT_Ex6_RouletteGame\RouletteGameTestApplication\obj\x86\Debug\RouletteGameTestApplication.pdb
+C:\Users\Salizer\Desktop\Projects\SWT_Ex6_RouletteGame\RouletteGameTestApplication\obj\x86\Debug\RouletteGameTestApplication.exe
+C:\Users\Salizer\Desktop\Projects\SWT_Ex6_RouletteGame\RouletteGameTestApplication\obj\x86\Debug\RouletteGameTestApplication.pdb
