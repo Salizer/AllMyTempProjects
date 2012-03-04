@@ -18,14 +18,14 @@ namespace RouletteGame.Tests
 
         // Setup and teardown
         [SetUp]
-        void setup()
+        public void setup()
         {
             fbTestObj = new FieldBet(sUserName, uiAmount, uiFieldNumber);
             fsFieldStub = new FieldStub();
         }
 
         [TearDown]
-        void teardown()
+        public void teardown()
         {
             fbTestObj = null;
             fsFieldStub = null;
@@ -33,22 +33,23 @@ namespace RouletteGame.Tests
 
         // Tests
         [Test]
-        void WonAmount_GotWinningNumber_GetMoney()
+        public void WonAmount_GotWinningNumber_GetMoney()
         {
             fsFieldStub.Number = uiFieldNumber;
             Assert.Greater(fbTestObj.WonAmount(fsFieldStub), 0); 
         }
         [Test]
-        void WonAmount_GotWinningNumber_GetsRightAmountOfMoney()
+        public void WonAmount_GotWinningNumber_GetsRightAmountOfMoney()
         {
             fsFieldStub.Number = uiFieldNumber;
             Assert.AreEqual(uiAmount * 36, fbTestObj.WonAmount(fsFieldStub)); 
         }
         [Test]
-        void WonAmount_DidntWin_GetZeroMoney()
+        public void WonAmount_DidntWin_GetZeroMoney()
         {
             fsFieldStub.Number = 2;
             Assert.AreEqual(0, fbTestObj.WonAmount(fsFieldStub)); 
         }
+        [Test]
     }
 }
