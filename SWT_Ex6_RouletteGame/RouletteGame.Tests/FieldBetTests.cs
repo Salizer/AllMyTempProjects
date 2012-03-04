@@ -11,15 +11,18 @@ namespace RouletteGame.Tests
     {
         // Members
         private FieldBet fbTestObj;
-        private string sUserName = "user1";
-        private uint uiAmount = 1000;
-        private uint uiFieldNumber = 1;
+        private string sUserName;
+        private uint uiAmount;
+        private uint uiFieldNumber;
         private FieldStub fsFieldStub;
 
         // Setup and teardown
         [SetUp]
         public void setup()
         {
+            sUserName = "user1";
+            uiAmount = 1000;
+            uiFieldNumber = 1;
             fbTestObj = new FieldBet(sUserName, uiAmount, uiFieldNumber);
             fsFieldStub = new FieldStub();
         }
@@ -51,5 +54,10 @@ namespace RouletteGame.Tests
             Assert.AreEqual(0, fbTestObj.WonAmount(fsFieldStub)); 
         }
         [Test]
+        public void ToString_GettingString_GetsTheCorrectString()
+        {
+            StringAssert.Contains(uiAmount.ToString(), fbTestObj.ToString());
+            StringAssert.Contains(uiFieldNumber.ToString(), fbTestObj.ToString());
+        }
     }
 }
