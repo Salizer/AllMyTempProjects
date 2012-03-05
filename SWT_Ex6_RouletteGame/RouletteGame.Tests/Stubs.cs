@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RouletteGame.Tests
 {
-    class FieldStub : IField
+    public class FieldStub : IField
     {
         // Members
         uint number;
@@ -57,6 +57,29 @@ namespace RouletteGame.Tests
         public Field GetResult()
         {
             return (fResult);
+        }
+    }
+
+    public class BetStub : IBet
+    {
+        private string playerName;
+
+        private uint amount;
+
+        public string PlayerName
+        {
+            get { return playerName; }
+        }
+
+        public uint Amount
+        {
+            set { amount = value; }
+            get { return amount; }
+        }
+
+        public uint WonAmount(IField field)
+        {
+            return(amount);
         }
     }
 }
