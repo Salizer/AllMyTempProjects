@@ -7,11 +7,11 @@ namespace RouletteGame
 {
     public class RouletteGame
     {
-        private Roulette _roulette;
+        private IRoulette _roulette;
         private bool _roundIsOpen;
         private List<IBet> _bets;
 
-        public RouletteGame(Roulette roulette)
+        public RouletteGame(IRoulette roulette)
         {
             _bets = new List<IBet>();
             _roulette = roulette;
