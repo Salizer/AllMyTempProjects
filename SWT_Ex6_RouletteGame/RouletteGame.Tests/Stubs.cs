@@ -44,6 +44,11 @@ namespace RouletteGame.Tests
         // Members
         Field fResult;
 
+        public Field Result
+        {
+            get { return (fResult); }
+            set { fResult = value; }
+        }
         public RouletteStub()
         {
             fResult = new Field(2, Field.Black);
@@ -66,6 +71,12 @@ namespace RouletteGame.Tests
 
         private uint amount;
 
+        public BetStub()
+        {
+            playerName = "User 1";
+            amount = 100;
+        }
+
         public string PlayerName
         {
             get { return playerName; }
@@ -80,6 +91,24 @@ namespace RouletteGame.Tests
         public uint WonAmount(IField field)
         {
             return(amount);
+        }
+    }
+
+    public class UIStub : UI
+    {
+        // Members
+        string sPrintString;
+
+        public string String
+        {
+            get { return (sPrintString); }
+        }
+        public override void PrintString(string _str, params object[] args)
+        {
+            StringBuilder sbStringCombined = new StringBuilder();
+            sbStringCombined.AppendFormat(_str, args);
+            sPrintString = sbStringCombined.ToString();
+            base.PrintString(_str, args);
         }
     }
 }

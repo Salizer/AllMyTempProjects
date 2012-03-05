@@ -10,11 +10,19 @@ namespace RouletteGame
         private IRoulette _roulette;
         private bool _roundIsOpen;
         private List<IBet> _bets;
+        private UI uiOutput;
 
         public RouletteGame(IRoulette roulette)
         {
             _bets = new List<IBet>();
             _roulette = roulette;
+            uiOutput = new ConsoleUI();
+        }
+        public RouletteGame(IRoulette roulette, UI output)
+        {
+            _bets = new List<IBet>();
+            _roulette = roulette;
+            uiOutput = output;
         }
 
         public void OpenBets()
@@ -37,6 +45,8 @@ namespace RouletteGame
 
         public void SpinRoulette()
         {
+            if (_roundIsOpen)
+                throw new RouletteGameException("Bets not closed when spinning");
             Console.Write("Spinning...");
             _roulette.Spin();
             Console.WriteLine("Result: {0}", _roulette.GetResult());
@@ -50,7 +60,7 @@ namespace RouletteGame
             {
                 var won = bet.WonAmount(result);
                 if(won > 0)
-                    Console.WriteLine("{0} just won {1}$ on a {2}", bet.PlayerName, won, bet);
+                    uiOutput.PrintString("{0} just won {1}$ on a {2}", bet.PlayerName, won, bet);
             }
         }
 

@@ -5,11 +5,18 @@ using System.Text;
 
 namespace RouletteGame
 {
-    class UI
+    public class UI
     {
-        public virtual void PrintString(string _str)
+        public virtual void PrintString(string _str, params object[] args)
         {
             Console.WriteLine("ARV FRA DENNE KLASSE!!!!!!!!!!!!!");
+        }
+    }
+    public class ConsoleUI : UI
+    {
+        public override void PrintString(string _str, params object[] args)
+        {
+            Console.WriteLine(_str, args);
         }
     }
 }
