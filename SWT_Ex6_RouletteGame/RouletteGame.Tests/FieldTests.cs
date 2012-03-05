@@ -63,7 +63,7 @@ namespace RouletteGame.Tests
         [Test]
         public void Number_SetsInvalidNumber_ThrowsException()
         {
-            Assert.Throws<FieldException>(delegate { fTestObj = new Field(37, Field.Black); });
+            Assert.Throws<FieldException>(delegate {fTestObj = new Field(37, Field.Black); });
         }
         [Test]
         public void Even_EvenNumber_ReturnsTrue()
