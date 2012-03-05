@@ -22,7 +22,7 @@ namespace RouletteGame.Tests
         [SetUp]
         public void setup()
         {
-            _sEvenOdd = "Odd";
+            _sEvenOdd = "odd";
             _uiAmount = 100;
             _uiWonAmount = 200;
             _eobTestObj = new EvenOddBet(_sEvenOdd,_uiAmount,_even);
@@ -55,7 +55,7 @@ namespace RouletteGame.Tests
         public void EvenOdd_OddString_WriteOdd()
         {
             StringAssert.Contains(_uiAmount.ToString(), _eobTestObj.ToString());
-            // Mangler lige string-test
+            StringAssert.Contains(_sEvenOdd.ToString(), _eobTestObj.ToString());
         }
     }
 }
